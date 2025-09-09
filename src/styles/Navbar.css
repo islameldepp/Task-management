@@ -1,0 +1,77 @@
+.navbar {
+  background: linear-gradient(135deg, #4b6cb7, #182848);
+  color: #fff;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: inherit;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  position: fixed; /* جعله ثابت في الأعلى */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* التأكد من أنه فوق كل المحتوى */
+  height: 70px; /* ارتفاع ثابت للـ Navbar */
+  box-sizing: border-box;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.navbar-center,
+.navbar-right {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-center li a,
+.navbar-right li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-center li a:hover,
+.navbar-right li a:hover {
+  color: #4b6cb7;
+}
+
+.lang-btn,
+.theme-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.lang-btn:hover,
+.theme-btn:hover {
+  background-color: #4b6cb7;
+  border-color: #4b6cb7;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  .navbar-center,
+  .navbar-right {
+    justify-content: center;
+  }
+}
