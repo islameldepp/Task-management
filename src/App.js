@@ -1,20 +1,29 @@
 import './App.css';
-import BenefitsSection from './components/BenefitsSection';
-import FeatureCard from './components/FeatureCard';
+
 import Footer from './components/Footer';
+import Login from './pages/Login';
 import Navbar from './components/Navbar';
-import Slider from './components/Slider';
+import Register from './pages/Register';
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
 
 function App() {
   return (
-    <div className="App">
-      <>
+    <div className="App" id="root-layout">
+      <BrowserRouter>
         <Navbar />
-        <Slider />
-        <FeatureCard />
-        <BenefitsSection />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="*" element={<h1>Page not found</h1>} />
+          </Routes>
+        </main>
+
         <Footer />
-      </>
+      </BrowserRouter>
     </div>
   );
 }

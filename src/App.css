@@ -1,12 +1,10 @@
-/* إزالة أي هوامش افتراضية من الجسم */
 body,
 html {
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* منع التمرير الأفقي */
+  overflow-x: hidden;
 }
 
-/* إذا كان هناك عنصر يحوي السلايدر */
 .App {
   width: 100%;
   overflow: hidden;

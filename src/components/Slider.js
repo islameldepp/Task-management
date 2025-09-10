@@ -3,6 +3,7 @@ import '../styles/Slider.css';
 import image1 from '../assets/image 1.png';
 import image2 from '../assets/image 2.png';
 import image3 from '../assets/image 3.png';
+import { useNavigate } from 'react-router-dom';
 
 const slides = [
   {
@@ -29,6 +30,7 @@ const slides = [
 ];
 
 const Slider = () => {
+  const navigate = useNavigate();
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
@@ -82,7 +84,12 @@ const Slider = () => {
               <p className="slide-p">{slide.p}</p>
               <h1 className="slide-h1">{slide.h1}</h1>
               <span className="slide-span">{slide.span}</span>
-              <button className="slide-button">{slide.button}</button>
+              <button
+                className="slide-button"
+                onClick={() => navigate('/register')}
+              >
+                {slide.button}
+              </button>
             </div>
           </div>
         ))}
